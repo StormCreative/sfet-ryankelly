@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------------------------
+
+	IMAGE REPLACE
+
+	This would be used if we have important text that we want to change into 
+	a background image but hide the text. An example could be a company logo.
+	We need this to be a link so therefore will need some text but as it is a 
+	logo it will be an image. Instead of wrapping an image tag inside an anchor 
+	the best solution is to image replace the text.
+
+	To use this within a class simply extend the following extension like so:
+
+	@extend %img-replace;
+
+--------------------------------------------------------------------------------*/
+
+%img-replace {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}

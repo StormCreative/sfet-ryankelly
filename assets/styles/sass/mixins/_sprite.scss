@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+	SPRITE
+
+	The sprite is now using compass to generate the map and work out the coordinates for which our image is located.
+
+	The global compass function 'sprite-map' = generates the sprite, and we tell it which folder to read, and then 
+	how we want the sprite to be laid out.
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+$sprite: sprite-map("sprite/*.png", $layout: 'smart', $spacing: 8px);
+$sprite-retina: sprite-map("sprite-retina/*.png", $layout: 'smart', $spacing: 16px);
+
+/*
+The mixin itself would be called in using @import sprite($name), with $name being the name of the file we want to be called in.
+*/
+
+@mixin sprite($name) {
+  $height: image-height(sprite-file($sprite, $name)); // Height of the image being used
+  $width: image-width(sprite-file($sprite, $name)); // Width of the image being used
+
+  background: sprite-url($sprite) sprite-position($sprite, $name) no-repeat; // the image that is being used for the background, the coordinates position of the file being used
+  height: $height;
+  width: $width;
+
+  @include retina {
+    background: sprite-url($sprite-retina) sprite-position($sprite, $name) no-repeat; // Same as above but pointing to our retina sprite
+
+    @include background-size(image-width(sprite-path($sprite))); // using the compass include for background size and making the background size the width of our original sprite
+  }
+}

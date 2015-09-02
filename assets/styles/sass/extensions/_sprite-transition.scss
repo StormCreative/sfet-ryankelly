@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------
+
+	SPRITE TRANSITION
+
+	This is used for elements that have images held within a 
+	sprite and need to apply a hover that has a soft ease in 
+	and out. The elements parent should have the sprite image 
+	applied and have a position of relative.
+
+---------------------------------------------------------------*/
+
+%sprite-transition {
+  // Add a fake hover image to get the effect of a fade in as our images can't transition as in a sprite and finds the background position
+  &:after {
+    content: '';
+
+    // Positioning
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    @include opacity(0);
+    @include transition(opacity 0.3s);
+  }
+
+  // on hover show the actual hover background
+  &:hover {
+    &:after {
+      @include opacity(1);
+    }
+  }
+
+  // ie8 issue that was showing the after above the main image and z-index couldn't cut it
+  .ie8 & {
+    &:after {
+      display: none;
+    }
+
+    &:hover {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}

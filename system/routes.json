@@ -1,0 +1,5 @@
+{
+    "signup/process": "signup/process",
+    "success": "home/success",
+    "failure": "home/failure"
+}

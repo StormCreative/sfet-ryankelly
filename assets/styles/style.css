@@ -1,0 +1,110 @@
+body {
+    
+    font-family: 'Montserrat';
+    margin: 0;
+
+}
+
+@media all and (max-width: 640px){
+
+    #signup-btn {
+    
+        display: none;
+    }
+
+}
+
+.success-span {
+    
+    color: green;
+    border-radius: 5%;
+    
+}
+
+.failure-span {
+
+    color: red;
+    border-radius: 5%;
+
+}
+
+.form-field {
+
+    margin-bottom: 10px;
+    
+}
+
+.main-heading {
+
+    margin: auto 0;
+    font-size-adjust: auto;
+    text-align: center;
+    position: relative;
+    color: #E44C40;
+    display: block;
+    top: 40vh;
+}
+
+#signup-btn {
+
+    margin: 0 auto;
+    font-size: 1em;
+    text-align: center;
+    position: relative;
+    color: #E44C40;
+    background-color: white;
+    display: block;
+    top: 50vh;
+    border-radius: 5%;
+
+}
+
+#main-head {
+    
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/images/bg-stormtest.jpg);
+    
+}
+
+#popup-close {
+
+    float: right;
+    border: 1px solid black;
+    padding: 5px;
+    
+}
+
+#signup-box{
+
+    width: 20vw;
+    padding: 20px;
+    border: 2px solid #E44C40;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.popup-background {
+
+    opacity: 0.5;
+    color: black;
+
+}
+
+.position-form {
+    
+    position: absolute;
+    z-index: 12;
+    top: 56%;
+    left: 39%;
+    background-color: white;
+    
+}
+
+span:hover {
+
+    cursor: pointer;
+    
+}

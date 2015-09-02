@@ -1,0 +1,210 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+	FRAMEWORK = GRIDS 
+
+	This is the base framework for our grid layout. 
+	Please try not touch this file and change styles as this will affect how the framework will behave.
+
+	If you need to change the way a sector is styled then add a class and style that class.
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+@if ($grid) == true {
+  .grid {
+    letter-spacing: -0.32em; // makes our grid items have a true width
+    margin: 0 -$grid-margin;
+    padding: 0;
+  }
+
+  // Every class that has grid__ at the start we want to apply these styles to them
+  [class*='grid__'] {
+    display: block;
+    letter-spacing: normal;
+    list-style: none;
+    padding: $grid-margin;
+    text-align: center;
+    vertical-align: top;
+    width: 100%; // default all our classes that have grid__ will be 100% for our mobile
+
+    @include bp(desktop) {
+      display: inline-block;
+    }
+  }
+
+  // Grid half
+  .grid__half {
+    @include bp(desktop) {
+      width: 50%;
+    }
+  }
+
+  // THIRDS
+  // Grid third
+  .grid__third {
+    @include bp(desktop) {
+      width: 33.33333%;
+    }
+  }
+
+  // Grid two third
+  .grid__two-third {
+    @include bp(desktop) {
+      width: 66.66666%;
+    }
+  }
+
+  // QUARTERS
+  // Grid quarter
+  .grid__quarter {
+    @include bp(desktop) {
+      width: 25%;
+    }
+  }
+
+  // Grid three quarter
+  .grid__three-quarter {
+    @include bp(desktop) {
+      width: 75%;
+    }
+  }
+
+  // FIFTHS
+  // Grid fifths
+  .grid__fifth {
+    @include bp(desktop) {
+      width: 20%;
+    }
+  }
+
+  // Grid two fifths
+  .grid__two-fifth {
+    @include bp(desktop) {
+      width: 40%;
+    }
+  }
+
+  // Grid three fifths
+  .grid__three-fifth {
+    @include bp(desktop) {
+      width: 60%;
+    }
+  }
+
+  // Grid four fifths
+  .grid__four-fifth {
+    @include bp(desktop) {
+      width: 80%;
+    }
+  }
+}
+
+.example {
+  background: #E8E8E8;
+  margin: 0;
+  padding: 0.5em;
+}
+
+/*
+	
+	<div class="grid">
+		<!-- FULL GRID -->
+		<div class="grid__full">
+			<p class="example">full</p>
+		</div>
+		<!-- HALF + HALF -->
+		<div class="grid__half">
+			<p class="example">half</p>
+		</div>
+		<div class="grid__half">
+			<p class="example">half</p>
+		</div>
+		<!-- QUARTER + QUARTER + HALF -->
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<div class="grid__half">
+			<p class="example">half</p>
+		</div>
+		<!-- QUARTER + THREE QUARTERS -->
+		<div class="grid__three-quarter">
+			<p class="example">three quarters</p>
+		</div>
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<!-- THIRD + THIRD + THIRD -->
+		<div class="grid__third">
+			<p class="example">third</p>
+		</div>
+		<div class="grid__third">
+			<p class="example">third</p>
+		</div>
+		<div class="grid__third">
+			<p class="example">third</p>
+		</div>
+		<!-- THIRD + TWO THIRDS -->
+		<div class="grid__two-third">
+			<p class="example">two thirds</p>
+		</div>
+		<div class="grid__third">
+			<p class="example">third</p>
+		</div>
+		<!-- QUARTER + QUARTER + QUARTER + QUARTER -->
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<div class="grid__quarter">
+			<p class="example">quarter</p>
+		</div>
+		<!-- FIFTH + FIFTH + FIFTH + FIFTH + FIFTH -->
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<!-- TWO FIFTH + THREE FIFTH -->
+		<div class="grid__two-fifth">
+			<p class="example">two fifth</p>
+		</div>
+		<div class="grid__three-fifth">
+			<p class="example">three fifth</p>
+		</div>
+		<!-- FIFTH + FOUR FIFTH -->
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__four-fifth">
+			<p class="example">four fifths</p>
+		</div>
+		<!-- TWO FIFTH + FIFTH + TWO FIFTH -->
+		<div class="grid__two-fifth">
+			<p class="example">two fifth</p>
+		</div>
+		<div class="grid__fifth">
+			<p class="example">fifth</p>
+		</div>
+		<div class="grid__two-fifth">
+			<p class="example">two fifth</p>
+		</div>
+	</div>
+
+*/

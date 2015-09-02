@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+	RETINA 
+	
+	New technologies / devices are using retina screens which means the pixel ratio is 2:1. 
+	By using this mixin we can target these devices with an image 2 times the size to increase 
+	the quality of the image displayed making it less pixelated.
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+@mixin retina {
+  @media (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 1.5dppx) {
+    @content;
+  }
+}

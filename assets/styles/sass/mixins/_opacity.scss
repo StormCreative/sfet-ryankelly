@@ -1,0 +1,14 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+	OPACITY 
+	
+	By using this mixin we can apply an opacity to a class which will be read by all browsers,
+	without having to target ie as this will do it for us.
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

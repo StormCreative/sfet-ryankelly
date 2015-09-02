@@ -1,0 +1,102 @@
+/*
+  HTC (IE 6 - 8 support for border-radius, shadows and linear gradients)
+---------------*/
+* {
+  behavior:url('styles/ie-css3.htc');
+}
+
+/*----------------------------------------
+
+	STRUCTURE
+
+----------------------------------------*/
+// Fonts
+@import "fonts/fonts";
+// Config settings and variables
+@import "config/settings";
+@import "config/variables";
+// Animations
+@import "animations/keyframes";
+// Functions
+@import "functions/calc-ems";
+// Mixins
+@import "mixins/hacks";
+@import "mixins/media-queries";
+@import "mixins/opacity";
+@import "mixins/prefixes";
+@import "mixins/retina";
+@import "mixins/sprite";
+// Extensions
+@import "extensions/img-replace";
+@import "extensions/select-arrow";
+@import "extensions/sprite-transition";
+// Framework
+@import "framework/grid";
+// Elements
+
+// Components
+
+
+/*
+	Global
+---------------*/
+* {
+  @include box-sizing(border-box);
+}
+
+/*
+	Body
+----------------*/
+
+body {
+  background: #F2F2F2;
+  font: #{($base-font-size / 16px) * 1em} / #{$line-height-ratio} $base-font-family, arial;
+  margin: 0;
+
+  -webkit-text-size-adjust: none; // stops the text from becoming bigger on orientation on iPhone / iPad devices
+  -webkit-font-smoothing: antialiased; // makes the font smooth on webkit devices
+}
+
+/*
+	Wrappers / Containers
+----------------------------*/
+.wrapper {
+  letter-spacing: normal;
+  margin: auto;
+  max-width: $wrapper-width;
+  overflow: hidden;
+
+  @if ($MQs) == false {
+    min-width: 77.5em; // 1240px
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: $container-width;
+}
+
+.content {
+  position: relative;
+  z-index: 0;
+}
+
+/*
+	Typography
+-------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+/*
+	Imagery
+----------------*/
+img {
+  border: none;
+}

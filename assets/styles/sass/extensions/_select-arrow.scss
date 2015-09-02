@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------------------------
+
+	SELECT ARROW
+
+	This enables a select box to have a different style of background. This will
+	remove the appearance of the arrow for webkit, firefox and ie10+ browsers.
+
+	@extend %select-arrow;
+
+--------------------------------------------------------------------------------*/
+
+%select-arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  text-indent: 0.01px;
+  text-overflow: '';
+
+  // IE10+ hack
+  &::-ms-expand {
+    display: none;
+  }
+}

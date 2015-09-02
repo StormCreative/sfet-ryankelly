@@ -1,0 +1,32 @@
+/*----------------------------------------
+
+	CONFIG = STYLES VARIABLES
+
+----------------------------------------*/
+
+// Fonts
+$arial: arial;
+
+// Base
+$base-font-family: $arial;
+$base-font-size: 16px;
+$line-height-ratio: 1.4;
+
+// Colours
+
+// Grid margin gaps between each column
+$grid-margin: 8px;
+
+// Containers
+$container-width: 62.5em !default; // 1000px
+$wrapper-width: 100%;
+
+// Errors
+$error-bgcolour: #ED1B24;
+$error-colour: #FFF;
+
+// Map
+$google-map-full: true !default;
+
+// Transitions
+$transition: 0.3s linear;

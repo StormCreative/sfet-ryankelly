@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------------------------
+	
+	BROWSER HACKS
+
+	Sometimes browsers have a tendency to play up and display styles differently 
+	from how they should. To combat this we can use a browser specific hack to 
+	target that browser and apply the styles directly to it.
+
+--------------------------------------------------------------------------------*/
+
+@mixin webkit() {
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @content;
+  }
+}
+
+@mixin firefox() {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}

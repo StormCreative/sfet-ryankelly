@@ -1,0 +1,73 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+	PREFIXES
+
+	This mixin will include all the prefixes that are used when we build our sites. This will increase development 
+	and will stop us duplicating the same code all the time aswell. prefixes are the -webkit-, -moz- that are used
+	before our property.
+
+	The types of properties that are using this mixin are:
+
+	- box-sizing
+	- border-radius
+	- box-shadow
+	- transition
+	- rotation
+	- animation
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+// box-sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+// border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// box-shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// transition
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+// rotation
+@mixin rotate($rotate) {
+  -webkit-transform: rotate(#{$rotate}deg);
+  -ms-transform: rotate(#{$rotate}deg);
+  transform: rotate(#{$rotate}deg);
+}
+
+// animation
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+// transform
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
